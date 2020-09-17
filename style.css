@@ -9,13 +9,13 @@ aside {
     position: fixed;
     width: 5vw;
     height: 100vh;
-    padding-left: 10px;
+    padding-left: 12px;
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: space-around;
-    background-color: #4B4B4B;
-    box-shadow: 0rem 1rem 3rem #989898;
+    justify-content: start;
+    background-color: #333333;
+    z-index: 2;
 }
 
 main {
@@ -24,6 +24,7 @@ main {
 }
 
 #mainContainer {
+    position: relative;
     padding-left: 2vw;
     display: flex;
     flex-direction: column;
@@ -49,12 +50,52 @@ hr {
 }
 
 svg {
-    height: 60px;
-    width: 60px;
-    fill: #1e1e1e;
+    height: 50px;
+    width: 50px;
+    fill: url('#gradient');
 }
 
 svg:hover {
-    background: linear-gradient(90deg,#ff8a00,#e52e71);
-    background-clip: content-box;
+    fill: #1e1e1e;
+}
+
+.iconBox {
+    padding-bottom: 40px;
+}
+
+.iconDescBox {
+    position: relative;
+    display: none;
+    left: 60px;
+    top: -40px;
+    height: 30px;
+    width: max-content;
+    background-color: #5F6A72;
+    color: #333333;
+    font-size: 1.15rem;
+    text-align: center;
+    text-wrap: none;
+    border-radius: 5px;
+    padding: 0 20px 0 20px;
+}
+
+svg:hover + .iconDescBox {
+    display: inline-block;
+    text-decoration: none;
+    animation: animation;
+    animation-duration: 0.15s;
+    animation-iteration-count: 1;
+}
+
+@keyframes animation {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(60px);
+    }
+}
+
+a:hover {
+    text-decoration: none;
 }
