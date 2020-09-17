@@ -1,0 +1,60 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Righteous", cursive;
+}
+
+aside {
+    position: fixed;
+    width: 5vw;
+    height: 100vh;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    background-color: #4B4B4B;
+    box-shadow: 0rem 1rem 3rem #989898;
+}
+
+main {
+    position: absolute;
+    left: 5vw;
+}
+
+#mainContainer {
+    padding-left: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: #1e1e1e;
+    color: white;
+    height: 100vh;
+}
+
+#mainContainer:first-of-type h2 {
+    text-align: center;
+    padding: 60px 0 20px 0;
+    font-size: 5rem;
+}
+
+#mainContainer:first-of-type p {
+    padding: 0 50px 30px 50px;
+    font-size: 2rem;
+}
+
+hr {
+    border-top: 10px solid white;
+}
+
+svg {
+    height: 60px;
+    width: 60px;
+    fill: #1e1e1e;
+}
+
+svg:hover {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    background-clip: content-box;
+}
